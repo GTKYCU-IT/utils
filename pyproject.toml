@@ -11,6 +11,14 @@ requires-python = ">=3.12,<4"
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest", "coverage", "build"]
+dev = ["pytest", "pytest-cov", "build"]
 
 [project.scripts]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov --cov-report html --cov-report term-missing --cov-fail-under 95"
+testpaths = [ "test" ]
+
+[tool.coverage.run]
+source = ["src"]
