@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gtkycu-utils"
+authors = [{ name = "Jadon Calvert", email = "calvertjadon@gmail.com" }]
+description = "Common utilities for internal tools"
+version = "1.0.0"
+requires-python = ">=3.12,<4"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "coverage", "build"]
+
+[project.scripts]
